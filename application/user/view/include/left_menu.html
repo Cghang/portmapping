@@ -1,0 +1,49 @@
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+
+            <p class="centered"><a href="profile.html"><img src="{$Think.RES}/assets/img/{:session('user')['icon']}" class="img-circle"
+                                                            width="60"></a></p>
+            <h5 class="centered">{:session('user')['nickname']}</h5>
+
+            <li class="mt">
+                <a class="{eq name="'[menu]'" value='home'}active{/eq}" href="{:url('user/index/index')}">
+                    <i class="fa fa-dashboard"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+
+            <li class="sub-menu">
+                <a class="{eq name="'[menu]'" value='user'}active{/eq}" href="javascript:;">
+                    <i class="fa fa-cogs"></i>
+                    <span>我的信息</span>
+                </a>
+                <ul class="sub">
+                    <li class="{eq name="'[name]'" value='detail'}active{/eq}"><a href="{:url('user/user/detail')}">我的信息</a></li>
+                    <li class="{eq name="'[name]'" value='password'}active{/eq}"><a href="{:url('user/user/password')}">修改密码</a></li>
+                </ul>
+            </li>
+
+            <li class="sub-menu">
+                <a class="{eq name="'[menu]'" value='order'}active{/eq}" href="{:url('user/order/index')}">
+                    <i class="fa fa-money"></i>
+                    <span>订单管理</span>
+                </a>
+            </li>
+            <li class="sub-menu">
+                <a class="{eq name="'[menu]'" value='channel'}active{/eq}" href="javascript:;">
+                    <i class="fa fa-cloud"></i>
+                    <span>隧道管理</span>
+                </a>
+                <ul class="sub">
+                    <li class="{eq name="'[name]'" value='channel_list'}active{/eq}"><a href="{:url('user/channel/index')}">隧道列表</a></li>
+                    <li class="{eq name="'[name]'" value='channel_hosts'}active{/eq}"><a href="{:url('user/channel/hosts')}">开通隧道</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
